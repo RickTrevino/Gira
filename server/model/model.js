@@ -1,17 +1,19 @@
 const mongoose = require('mongoose');
 
 var schema = new mongoose.Schema({
-    name:{
-        type: String,
-        require: true
-    },
-    email:{
+    taskId:{
         type: String,
         require: true,
         unique: true
     },
-    gender: String,
-    status: String
+    summary:{
+        type: String,
+        require: true,
+    },
+    status: String,
+    assignee: String,
+    dueDate: Date,
+    priority: String 
 });
 
 const Userdb = mongoose.model('userdb', schema);
