@@ -62,13 +62,18 @@ a{
 	color:var(--light);
 }
 
+.header-container{
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
 #header nav{
 	background-color: #4B0082;
 	padding: 1em 0;
 	width: 100%;
 }
 
-#header nav .container{
+#header nav .header-container{
 display: flex;
 align-items: center;
 justify-content: space-between;
