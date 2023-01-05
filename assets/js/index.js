@@ -1,8 +1,8 @@
-$("#add_user").submit(function(event){
+$("#add_task").submit(function(event){
     alert("Data Inserted Successfully.");
 });
 
-$("#update_user").submit(function(event){
+$("#update_task").submit(function(event){
     event.preventDefault();
     
     var unindexed_array = $(this).serializeArray();
@@ -12,10 +12,8 @@ $("#update_user").submit(function(event){
        data[n['name']] = n['value']
     })
     
-    console.log(data);
-    
     var request = {
-        "url" : `http://localhost:3000/api/users/${data.id}`,
+        "url" : `http://localhost:3000/api/tasks/${data.id}`,
         "method" : "PUT",
         "data" : data
     }
@@ -31,11 +29,11 @@ if(window.location.pathname == "/"){
         var id = $(this).attr("data-id")
 
         var request = {
-            "url" : `http://localhost:3000/api/users/${id}`,
+            "url" : `http://localhost:3000/api/tasks/${id}`,
             "method" : "DELETE",
         }
         
-        if(confirm("Do you reall want to delete this record?")){
+        if(confirm("Do you really want to delete this record?")){
             $.ajax(request).done(function(response){
                 alert("Data deleted successfully.");
                 location.reload();

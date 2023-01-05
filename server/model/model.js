@@ -1,11 +1,6 @@
 const mongoose = require('mongoose');
 
 var schema = new mongoose.Schema({
-    taskId:{
-        type: String,
-        require: true,
-        unique: true
-    },
     summary:{
         type: String,
         require: true,
@@ -16,6 +11,6 @@ var schema = new mongoose.Schema({
     priority: String 
 });
 
-const Userdb = mongoose.model('userdb', schema);
+const Taskdb = mongoose.model('taskdb', schema);
 
-module.exports = Userdb;
+module.exports = Taskdb;

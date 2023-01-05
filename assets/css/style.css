@@ -140,7 +140,7 @@ table{
 
 }
 
-/* add user & update user tempalte */
+/* add task & update task tempalte */
 .form-title{
 	margin-top: 2em;
 }
@@ -149,18 +149,18 @@ table{
 	padding: .5em;
 }
 
-.new_user{
+.new_task{
 	max-width: 786px;
 	margin: auto;
 }
 
-#update_user .form-group,
-#add_user.form-group{
+#update_task .form-group,
+#add_task .form-group{
 	margin: .4em 0;
 }
 
-#update_user .form-group input[type="text"],
-#add_user .form-group input[type="text"]{
+#update_task .form-group input[type="text"],
+#add_task .form-group input[type="text"]{
 	width: 100%;
 	padding: .6em 1em;
 	margin: .5em 0;
@@ -170,12 +170,24 @@ table{
 	border-radius: .2em;
 }
 
-#update_user .form-group .radio,
-#add_user .form-group .radio{
+/* adding style to date picker*/
+#update_task .form-group input[type="date"],
+#add_task .form-group input[type="date"]{
+	display: inline-block;
+	padding: .6em 1em;
+	margin: .5em 0;
+	border: 1px solid var(--border);
+	font-family: 'Barlow', sans-serif;
+	font-size: 1em;
+	border-radius: .2em;
+}
+
+/* adding style to radio buttons */
+#update_task .form-group .radio,
+#add_task .form-group .radio{
 	margin: 1em 2em;
 } 
 
-/* adding style to radio buttons */
 .radio input[type="radio"]{
 	position: absolute;
 	opacity: 0;
@@ -215,8 +227,8 @@ table{
 	background: #b4b4b4;
 }
 
-#update_user .form-group .btn,
-#add_user .form-group .btn{
+#update_task .form-group .btn,
+#add_task .form-group .btn{
 	width: 100%;
 	padding: .9em 1em;
 	background-color: #16db93;
@@ -228,8 +240,8 @@ table{
 	margin: .5em 0;
 }
 
-#update_user .form-group .btn:hover,
-#add_user .form-group .btn:hover{
+#update_task .form-group .btn:hover,
+#add_task .form-group .btn:hover{
 	background-color: var(--dark);
 	color: var(--border);
 }

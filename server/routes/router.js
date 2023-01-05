@@ -11,22 +11,22 @@ const controller = require('../controller/controller');
 route.get('/', services.homeRoutes);
 
 /**
-* @description add users 
-* @method GET /add-user
+* @description add tasks 
+* @method GET /add-task
 */
-route.get('/add-user', services.add_user);
+route.get('/add-task', services.add_task);
 
 /**
-* @description update user
-* @method GET /update-user
+* @description update task 
+* @method GET /update-task
 */
-route.get('/update-user', services.update_user);
+route.get('/update-task', services.update_task);
 
 // API
-route.post('/api/users', controller.create);
-route.get('/api/users', controller.find);
-route.put('/api/users/:id', controller.update);
-route.delete('/api/users/:id', controller.delete);
+route.post('/api/tasks', controller.create);
+route.get('/api/tasks', controller.find);
+route.put('/api/tasks/:id', controller.update);
+route.delete('/api/tasks/:id', controller.delete);
 
 
 module.exports = route;
