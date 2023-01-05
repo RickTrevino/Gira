@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap');
 
 :root {
-	--dark: #2b2d42;
+	--dark: #223e50;
 	--light: #adb5bd;
 	--border: #dee2e6;
 	--border-btn: #edf2f4;
@@ -26,6 +26,10 @@ a{
 .nav-brand{
 	font-size: 1.5em;
 	font-weight: bold;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .d-flex{
@@ -58,15 +62,8 @@ a{
 	color:var(--light);
 }
 
-.text-gradient{
-	background: linear-gradient(to right, #8e2de2, #4a00e0);
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
 #header nav{
-	background-color: #06d6a0;
+	background-color: #4B0082;
 	padding: 1em 0;
 	width: 100%;
 }
@@ -104,7 +101,7 @@ table{
 }
 
 .table tr:hover{
-	background-color: #06d6a0;
+	background-color: #d9edf7;
 }
 
 .table tr:hover td > a{
@@ -115,6 +112,14 @@ table{
 	color: #fff;
 	background-color: var(--dark);
 	border-color: #32383e;
+}
+
+.table thead th:first-of-type{
+    border-top-left-radius: 10px; 
+}
+
+.table thead th:last-of-type{
+    border-top-right-radius: 10px; 
 }
 
 @media only screen and (max-width: 1024px){
@@ -140,7 +145,7 @@ table{
 
 }
 
-/* add task & update task tempalte */
+/* add task & update task template*/
 .form-title{
 	margin-top: 2em;
 }
@@ -162,18 +167,6 @@ table{
 #update_task .form-group input[type="text"],
 #add_task .form-group input[type="text"]{
 	width: 100%;
-	padding: .6em 1em;
-	margin: .5em 0;
-	border: 1px solid var(--border);
-	font-family: 'Barlow', sans-serif;
-	font-size: 1em;
-	border-radius: .2em;
-}
-
-/* adding style to date picker*/
-#update_task .form-group input[type="date"],
-#add_task .form-group input[type="date"]{
-	display: inline-block;
 	padding: .6em 1em;
 	margin: .5em 0;
 	border: 1px solid var(--border);
@@ -212,13 +205,13 @@ table{
 }
 
 .radio input[type="radio"]:checked + .radio-label:before{
-	background-color: #16db93;
+	background-color: #4B0082;
 	box-shadow: inset 0 0 0 4px #e9ecef;
 }
 
 .radio input[type="radio"]:focus+ .radio-label:before{
 	outline: none;
-	border-color: #16db93;
+	border-color: #4B0082;
 }
 
 .radio input[type="radio"]:disabled + .radio-label:before{
@@ -227,21 +220,76 @@ table{
 	background: #b4b4b4;
 }
 
+/* styling save buttons */
 #update_task .form-group .btn,
 #add_task .form-group .btn{
-	width: 100%;
+	width: 20%;
 	padding: .9em 1em;
-	background-color: #16db93;
+	background-color: #4B0082;
 	border: none;
 	font-family: 'PT Sans', sans-serif;
 	font-size: 1em;
 	cursor: pointer;
 	border-radius: .2em;
 	margin: .5em 0;
+	color: #fff;
+	float: right;
 }
 
 #update_task .form-group .btn:hover,
 #add_task .form-group .btn:hover{
-	background-color: var(--dark);
+	background-color: #8e2de2;
 	color: var(--border);
 }
+
+/* styling buttons */
+.btn.update,
+.btn.delete {
+	color: #fff;
+	border: none;
+	box-shadow: none;
+}
+
+.btn.update {
+	color: #16db93;
+}
+
+.btn.delete {
+	color: #f44336;
+}
+
+/* styling form */
+h2.text-dark {
+	font-size: 2em;
+	font-weight: bold;
+	color: #333;
+}
+
+span.text-light {
+	color: #999;
+	font-size: 0.9em;
+	display: block;
+}
+
+label.text-light {
+	font-weight: bold;
+	color: #666;
+	display: block;
+	margin-bottom: 0.5em;
+}
+
+input[type="text"],
+input[type="date"] {
+	width: 100%;
+	padding: 0.5em;
+	font-size: 1em;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+	outline: none;
+	border-color: #16db93;
+}
+  

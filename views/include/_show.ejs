@@ -7,7 +7,7 @@
     <td><%= tasks[i].assignee %></td>
     <td><%= tasks[i].dueDate.substr(6, 4) + "-" + tasks[i].dueDate.substr(0, 4) %></td>
     <td><%= tasks[i].priority %></td>
-    <td>`
+    <td>
         <a href="/update-task?id=<%= tasks[i]._id %> " class="btn border-shadow update">
             <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
         </a>

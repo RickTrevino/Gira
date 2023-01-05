@@ -6,12 +6,16 @@
     <!-- Main Site -->
     <main id="site-main">
       <div class="container">
-          <div class="box-nav d-flex justify-between">
-              <a href="/add-task" class="border-shadow">
-                  <span class="text-gradient"><i class="fa-solid fa-plus"></i> New Task
+            <div class="form-title text-center">
+                <h2 class="text-dark">All Tickets</h2>
+                <span class="text-light">View and manage your tickets</span>
+            </div>
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-task" class="border-shadow">
+                  <span class="text-gradient"><i class="fa-solid fa-plus"></i> New Ticket
                   </span>
-              </a>
-          </div>
+                </a>
+            </div>
           
           <!-- Form Handling -->
           <form action="/" method="POST">
@@ -19,12 +23,13 @@
                  <thead class="thead-dark">
                   <tr>
                       <th>Row</th> 
-                      <th>Task Id</th> 
+                      <th>Ticket Id</th> 
                       <th>Summary</th> 
                       <th>Status</th> 
                       <th>Assignee</th> 
                       <th>Due Date</th> 
                       <th>Priority</th> 
+                      <th><!-- buttons here --></th>
                   </tr>
                  </thead>
                  <tbody>
