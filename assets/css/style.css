@@ -225,6 +225,12 @@ table{
 	.nav-nav form {
 		display: none;
 	}
+	
+	/* site-wide styling */
+	.container{
+		padding-left: 1em;
+		padding-right: 1em;
+	}
 
 }
 
