@@ -179,8 +179,10 @@ table{
     border-top-right-radius: 10px; 
 }
 
+/* mobile styling */
 @media only screen and (max-width: 1024px){
 
+	/* table styling */
 	table, thead, tbody, th, td, tr{
 		display: block;
 	}
@@ -198,6 +200,30 @@ table{
 	td{
 		border: none;
 		position: relative;
+	}
+	
+	td[data-label="Row"]{
+		display: none;
+	}
+	
+	td:not([data-label="Buttons"]):before{
+		content: attr(data-label) ": ";
+		font-weight: bold;
+	}
+	
+	td[data-label="Ticket Id"]{
+		text-align: center;
+		background-color: #32383e;
+		color: #fff;
+	}
+	
+	td[data-label="Buttons"]{
+		text-align: center;
+	}
+	
+	/* nav bar styling */
+	.nav-nav form {
+		display: none;
 	}
 
 }

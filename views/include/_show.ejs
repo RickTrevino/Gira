@@ -1,13 +1,13 @@
 <% for(var i=0; i<tasks.length; i++){ %>
 <tr>
-    <td><%= i+1 %> </td>
-    <td><%= tasks[i]._id.substr(tasks[i]._id.length -3 )%></td>
-    <td><%= tasks[i].summary %></td>
-    <td><%= tasks[i].status %></td>
-    <td><%= tasks[i].assignee %></td>
-    <td><%= tasks[i].dueDate.substr(6, 4) + "-" + tasks[i].dueDate.substr(0, 4) %></td>
-    <td><%= tasks[i].priority %></td>
-    <td>
+    <td data-label="Row"><%= i+1 %> </td>
+    <td data-label="Ticket Id"><%= tasks[i]._id.substr(tasks[i]._id.length -3 )%></td>
+    <td data-label="Summary"><%= tasks[i].summary %></td>
+    <td data-label="Status"><%= tasks[i].status %></td>
+    <td data-label="Assignee"><%= tasks[i].assignee %></td>
+    <td data-label="Due Date"><%= tasks[i].dueDate.substr(6, 4) + "-" + tasks[i].dueDate.substr(0, 4) %></td>
+    <td data-label="Priority"><%= tasks[i].priority %></td>
+    <td data-label="Buttons">
         <a href="/update-task?id=<%= tasks[i]._id %> " class="btn border-shadow update">
             <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
         </a>
