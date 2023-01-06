@@ -5,6 +5,7 @@ const bodyparser = require("body-parser");
 const path = require('path');
 
 const connectDB = require('./server/database/connection');
+const cors = require('cors');
 
 const app = express();
 
@@ -16,6 +17,11 @@ app.use(morgan('tiny'));
 
 // mongodb connection
 connectDB();
+
+// CORS security to allow db connection
+app.use(cors({
+    origin: 'https://gira.up.railway.app'
+}));
 
 // parse request to body-parser
 app.use(bodyparser.urlencoded({extended : true}));
