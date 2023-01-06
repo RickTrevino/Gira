@@ -20,7 +20,7 @@ connectDB();
 
 // CORS security to allow db connection
 app.use(cors({
-    origin: 'https://gira.up.railway.app'
+    origin: '*'
 }));
 
 // parse request to body-parser
