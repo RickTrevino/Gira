@@ -13,7 +13,7 @@ $("#update_task").submit(function(event){
     })
     
     var request = {
-        "url" : `http://localhost:3000/api/tasks/${data.id}`,
+        "url" : `/api/tasks/${data.id}`,
         "method" : "PUT",
         "data" : data
     }
@@ -29,7 +29,7 @@ if(window.location.pathname == "/"){
         var id = $(this).attr("data-id")
 
         var request = {
-            "url" : `http://localhost:3000/api/tasks/${id}`,
+            "url" : `/api/tasks/${id}`,
             "method" : "DELETE",
         }
         
