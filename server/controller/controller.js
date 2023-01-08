@@ -20,7 +20,7 @@ exports.create = (req, res) => {
     // save user to database
     task.save(task)
         .then(data => {
-            res.redirect('/add-task');
+            res.redirect('/#');
         })
         .catch(err => {
             res.status(500).send({

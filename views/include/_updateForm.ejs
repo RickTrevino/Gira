@@ -3,7 +3,8 @@
         <div class="form-group">
             <label for="summary" class="text-light">Ticket Summary</label>
             <input type="hidden" name="id" value="<%= task._id%>">
-            <input type="text" name="summary" value="<%= task.summary%>" placeholder="Create a new task">
+            <input type="text" name="summary" value="<%= task.summary%>" placeholder="Create a new task" maxlength="120">
+            <div class="error-message">Maximum length is 120 characters.</div>
         </div>
 
         <div class="form-group">
@@ -13,7 +14,7 @@
 
         <div class="form-group">
             <label for="dueDate" class="text-light">Due Date</label>
-            <input type="date" name="dueDate" value="<%= task.dueDate.substr(0, 10)%>" placeholder="">
+            <input type="date" name="dueDate" value="<%= task.dueDate ? task.dueDate.substr(0, 10) : "" %>" placeholder="">
         </div>
         
         <div class="form-group">
@@ -47,7 +48,7 @@
                 <label for="radio-6" class="radio-label">High</label>
             </div>
             <div class="radio inline">
-                <input type="radio" id="radio-6" name="priority" value="Critical" <%= task.priority == 'Critical' ? 'checked':'' %>>
+                <input type="radio" id="radio-7" name="priority" value="Critical" <%= task.priority == 'Critical' ? 'checked':'' %>>
                 <label for="radio-7" class="radio-label">Critical</label>
             </div>
         </div>
