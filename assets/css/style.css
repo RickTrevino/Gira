@@ -85,6 +85,8 @@ a{
 	background-color: #4B0082;
 	padding: 1em 0;
 	width: 100%;
+	position: fixed;
+	top: 0;
 }
 
 #header nav .header-container{
