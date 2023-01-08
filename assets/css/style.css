@@ -144,6 +144,10 @@ table{
 	background-color: #f8f9fa;
 }
 
+.table th{
+	white-space: nowrap;
+}
+
 .table td, .table th{
 	padding: .75em;
 	vertical-align: top;
@@ -151,10 +155,13 @@ table{
 	border-top: 1px solid var(--border);
 }
 
+td[data-label="Buttons"]{
+	white-space: nowrap;
+}
+
 .table td >a.btn{
-	padding: .3em 1em;
+	padding: .1em .1em;
 	font-size: 1.1em;
-	margin: 0 .2em;
 }
 
 .table tr:hover{
