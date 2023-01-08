@@ -1,46 +1,45 @@
-
 <!-- include header -->
-  <%- include('include/_header')%>
-<!-- /include header -->
+<%- include('include/_header')%>
+    <!-- /include header -->
 
     <!-- Main Site -->
     <main id="site-main">
-      <div class="container">
+        <div class="container">
             <div class="form-title text-center">
                 <h2 class="text-dark">All Tickets</h2>
                 <span class="text-light">View and manage your tickets</span>
             </div>
-          
-          <!-- Form Handling -->
-          <form action="/" method="POST">
-              <table class="table">
-                 <thead class="thead-dark">
-                  <tr>
-                      <th>Row</th> 
-                      <th><i class="fas fa-hashtag"></i> Ticket Id</th> 
-                      <th><i class="fas fa-align-left"></i> Summary</th> 
-                      <th><i class="fas fa-check"></i> Status</th> 
-                      <th><i class="fa-regular fa-circle-user"></i> Assignee</th> 
-                      <th><i class="fa-regular fa-calendar"></i> Due Date</th> 
-                      <th><i class="fas fa-bolt"></i> Priority</th> 
-                      <th><!-- buttons here --></th>
-                  </tr>
-                 </thead>
-                 <tbody>
-                  <%- include('include/_show')%>
-                 </tbody>
-              </table>
-          </form>
+
+            <!-- Form Handling -->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Row</th>
+                            <th><i class="fas fa-hashtag"></i> Ticket Id</th>
+                            <th><i class="fas fa-align-left"></i> Summary</th>
+                            <th><i class="fas fa-check"></i> Status</th>
+                            <th><i class="fa-regular fa-circle-user"></i> Assignee</th>
+                            <th><i class="fa-regular fa-calendar"></i> Due Date</th>
+                            <th><i class="fas fa-bolt"></i> Priority</th>
+                            <th><!-- buttons here --></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('include/_show')%>
+                    </tbody>
+                </table>
+            </form>
             <div class="box-nav d-flex justify-between float-right">
                 <a href="/add-task" class="border-shadow primarybtn">
-                  <span class=""><i class="fa-solid fa-plus"></i> New Ticket
-                  </span>
+                    <span class=""><i class="fa-solid fa-plus"></i> New Ticket
+                    </span>
                 </a>
             </div>
-      </div>
-  </main>
-<!-- /Main Site -->
+        </div>
+    </main>
+    <!-- /Main Site -->
 
-<!-- include footer-->
+    <!-- include footer-->
     <%- include('include/_footer')%>
-<!-- /include footer -->
+        <!-- /include footer -->
