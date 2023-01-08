@@ -5,7 +5,7 @@
     <td data-label="Summary"><%= tasks[i].summary %></td>
     <td data-label="Status"><%= tasks[i].status %></td>
     <td data-label="Assignee"><%= tasks[i].assignee %></td>
-    <td data-label="Due Date"><%= tasks[i].dueDate.substr(6, 4) + "-" + tasks[i].dueDate.substr(0, 4) %></td>
+    <td data-label="Due Date"><%= tasks[i].dueDate ? tasks[i].dueDate.substr(6, 4) + "-" + tasks[i].dueDate.substr(0, 4) : ""%></td>
     <td data-label="Priority"><%= tasks[i].priority %></td>
     <td data-label="Buttons">
         <a href="/update-task?id=<%= tasks[i]._id %> " class="btn border-shadow update">
