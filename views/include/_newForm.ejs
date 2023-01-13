@@ -2,10 +2,10 @@
 <form action="/api/tasks" method="POST" id="add_task">
     <div class="add_task">
         <div class="form-group">
-            <label for="summary" class="text-light">Ticket Summary</label>
+            <label for="summary" class="text-light">Ticket summary</label>
             <input type="hidden" name="id" value="">
-            <input required type="text" name="summary" value="" placeholder="Create a new ticket" maxlength="120">
-            <div class="error-message">Maximum length is 120 characters.</div>
+            <input required type="text" name="summary" value="" placeholder="Create a new ticket (120 characters max)" maxlength="120">
+            <div class="error-message error-message-summary">maximum length is 120 characters.</div>
         </div>
 
         <div class="form-group">
@@ -54,6 +54,11 @@
             </div>
         </div>
 
+        <div class="form-group">
+            <label for="detail" class="text-light">Ticket details</label>
+            <textarea type="text" name="detail" rows="5" value="" placeholder="Add additional details (1000 characters max)" maxlength="1000"></textarea>
+            <div class="error-message error-message-detail">maximum length is 1000 characters.</div>
+        </div>
 
         <div class="form-group">
             <button type="submit" class="btn text-dark update">Save</button>

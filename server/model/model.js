@@ -8,7 +8,8 @@ var schema = new mongoose.Schema({
     status: String,
     assignee: String,
     dueDate: Date,
-    priority: String 
+    priority: String,
+    detail: String
 });
 
 const Taskdb = mongoose.model('taskdb', schema);

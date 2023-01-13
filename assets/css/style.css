@@ -273,6 +273,17 @@ td[data-label="Buttons"]{
 	border-radius: .2em;
 }
 
+#update_task .form-group textarea[type="text"],
+#add_task .form-group textarea[type="text"]{
+	width: 100%;
+	padding: .6em 1em;
+	margin: .5em 0;
+	border: 1px solid var(--border);
+	font-family: 'Barlow', sans-serif;
+	font-size: 1em;
+	border-radius: .2em;
+}
+
 /* adding style to radio buttons */
 #update_task .form-group .radio,
 #add_task .form-group .radio{

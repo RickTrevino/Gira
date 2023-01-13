@@ -14,7 +14,8 @@ exports.create = (req, res) => {
         status: req.body.status,
         assignee: req.body.assignee,
         dueDate: req.body.dueDate,
-        priority: req.body.priority
+        priority: req.body.priority,
+        detail: req.body.detail
     });
     
     // save user to database
