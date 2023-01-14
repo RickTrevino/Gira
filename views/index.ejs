@@ -12,16 +12,16 @@
 
             <!-- Form Handling -->
             <form action="/" method="POST">
-                <table class="table">
+                <table id="ticketTable" class="table">
                     <thead class="thead-dark">
                         <tr>
-                            <th>Row</th>
-                            <th><i class="fas fa-hashtag"></i> Ticket Id</th>
-                            <th><i class="fas fa-align-left"></i> Summary</th>
-                            <th><i class="fas fa-check"></i> Status</th>
-                            <th><i class="fa-regular fa-circle-user"></i> Assignee</th>
-                            <th><i class="fa-regular fa-calendar"></i> Due Date</th>
-                            <th><i class="fas fa-bolt"></i> Priority</th>
+                            <th >Row</th>
+                            <th onclick="sortTable(1)"><i class="fas fa-hashtag"></i> Ticket Id<span class="sort-icon"><i class="fas fa-sort-down"></i></span></th>
+                            <th onclick="sortTable(2)"><i class="fas fa-align-left"></i> Summary<span class="sort-icon"><i class="fas fa-sort-down"></i></span></th>
+                            <th onclick="sortTable(3)"><i class="fas fa-check"></i> Status<span class="sort-icon"><i class="fas fa-sort-down"></i></span></th>
+                            <th onclick="sortTable(4)"><i class="fa-regular fa-circle-user"></i> Assignee<span class="sort-icon"><i class="fas fa-sort-down"></i></span></th>
+                            <th onclick="sortTable(5)"><i class="fa-regular fa-calendar"></i> Due Date<span class="sort-icon"><i class="fas fa-sort-down"></i></span></th>
+                            <th onclick="sortTable(6)"><i class="fas fa-bolt"></i> Priority<span class="sort-icon"><i class="fas fa-sort-down"></i></span></th>
                             <th><!-- buttons here --></th>
                         </tr>
                     </thead>

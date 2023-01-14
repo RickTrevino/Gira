@@ -180,6 +180,21 @@ td[data-label="Buttons"]{
 	border-color: #32383e;
 }
 
+.table .thead-dark th:hover{
+	color: #fff;
+	background-color: #666;
+}
+
+.table .sort-icon{
+	visibility: hidden;
+	padding-left: .5em;
+}
+
+.table .thead-dark th:hover .sort-icon{
+	visibility: visible;
+}
+
+
 .table thead th:first-of-type{
     border-top-left-radius: 10px; 
 }
